@@ -1,17 +1,19 @@
-import { HStack, Switch, Text, useColorMode } from "@chakra-ui/react";
+import { Switch, Text, VStack, useColorMode } from "@chakra-ui/react";
 
 const ColorModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <HStack>
+    <VStack>
+      <Text whiteSpace="nowrap" fontSize={"xs"}>
+        Dark Mode
+      </Text>
       <Switch
         colorScheme="green"
         isChecked={colorMode === "dark"}
         onChange={toggleColorMode}
       />
-      <Text whiteSpace="nowrap">Dark Mode</Text>
-    </HStack>
+    </VStack>
   );
 };
 
