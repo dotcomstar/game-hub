@@ -1,9 +1,13 @@
-import { Link, Text } from "@chakra-ui/react";
+import { Icon, Link, Text } from "@chakra-ui/react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Hyperlink = () => {
   return (
-    <Link as="button" href="https://rawg.io/" isExternal>
-      <Text fontSize="xs">All data and images attributed to Rawg.io</Text>
+    <Link href="https://rawg.io/" isExternal>
+      <Text align="center" fontSize="xs">
+        All data and images attributed to Rawg.io{" "}
+        <Icon as={FaExternalLinkAlt} />
+      </Text>{" "}
     </Link>
   );
 };
